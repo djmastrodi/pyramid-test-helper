@@ -1,0 +1,65 @@
+{
+  "fieldsDefault":[
+    {
+      "key":"entry.175234094",
+      "value":"Backend"
+    },
+    {
+      "key":"entry.1019877458",
+      "value":"Core"
+    },
+    {
+      "key":"entry.242412434",
+      "value":"Services - Core"
+    },
+    {
+      "key":"entry.1961048516",
+      "value":"Legado"
+    }
+  ],
+  "urlApi":"https://docs.google.com/forms/u/0/d/e/1FAIpQLSd8YrE2eLFELD_xzEaZgxDj3LUjx9-fWKVBfsAFxz-Mp9Xpig/formResponse?edit2=2_ABaOnudgBT24DKrzf8iVHbof5hcO1pzEx1dYQn9Ihm6oY_8oBhz723sRMr71gR3S1RUNgkw",
+  "headers":[
+    {
+      "Key":"content-type",
+      "value":"application/x-www-form-urlencoded"
+    }
+  ],
+  "testConfig":[
+    {
+      "name": "Unit",
+      "fileNameRegex": ".*/*Tests?\\.cs$",
+      "path": "../services-interconsignado-core/InterConsignado.Tests",
+      "fieldCount":"entry.1018214976",
+      "testRules": {
+        "testCountRegex": "\\[Fact*]",
+        "optionsTestCountRegex":"gm",
+        "testExclusionRegex": "^\\[Fact\\(Skip=\"(.+?)\"\\)\\]+$",
+        "optionsTestExcluisonRegex":"gm"
+      }
+    },
+    {
+      "name": "Contract",
+      "fileNameRegex": ".*spec\\.js$",
+      "path": "../services-interconsignado-core/tests/test-contract/spec",
+      "fieldCount":"entry.1541583461",
+      "testRules": {
+        "testCountRegex": ".*it.*\\('(.+?)",
+        "optionsTestCountRegex":"gm",
+        "testExclusionRegex": ".*it\\.skip",
+        "optionsTestExcluisonRegex":"gm"
+      }
+    },
+    {
+      "name": "Integration",
+      "fileNameRegex": ".*spec\\.js$",
+      "path": "../services-interconsignado-core/tests/cypress/integration",
+      "fieldCount":"entry.1115479058",
+      "testRules": {
+        "testCountRegex": ".*it.*\\('(.+?)",
+        "optionsTestCountRegex":"gm",
+        "testExclusionRegex": ".*it\\.skip",
+        "optionsTestExcluisonRegex":"gm"
+      }
+    }
+  ]
+}
