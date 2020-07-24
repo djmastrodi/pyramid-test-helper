@@ -22,8 +22,8 @@ jobs:
     - name: Build
       if: steps.cache-modules.outputs.cache-hit != 'true'
       run: npm install
-    - name: Test
-      run: npm test
+    - name: package
+      run: npm run build
   publish:
     name: Publish
     needs: test
@@ -40,8 +40,8 @@ jobs:
     - name: Build
       if: steps.cache-modules.outputs.cache-hit != 'true'
       run: npm install
-    - name: Test
-      run: npm test
+    - name: package
+      run: npm run build
 
     - name: Publish
       uses: mikeal/merge-release@master
