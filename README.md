@@ -13,8 +13,8 @@ node ./node_modules/pyramid-test-helper/lib/app.js ConfigFile.json
 ## Example configuration file
 
 {
-  "fieldsDefault":[
-    {
+   "fieldsDefault":[
+     {
       "Key":"Label",
       "value":"Value"
     }
