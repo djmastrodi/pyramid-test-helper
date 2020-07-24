@@ -1,14 +1,26 @@
 {
-  "name": "pyramid-test-helperpyramid-test-helper",
-  "version": "1.0.0",
+  "name": "pyramid-test-helper",
+  "version": "1.0.11",
   "description": "",
-  "main": "index.js",
+  "main": "lib/app.js",
+  "types": "lib/app.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djmastrodi/pyramid-test-helper.git"
+  },
   "scripts": {
     "test": "jest --config jest.config.json",
     "build": "tsc"
   },
   "author": "Djonathan Mastrodi",
   "license": "ISC",
+  "keywords": [
+    "pyramid-scan"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "pyramid-scan": "./lib/bin/pyramid-scan.js"
+  },
   "dependencies": {
     "@types/node": "^14.0.23",
     "axios": "^0.19.2",

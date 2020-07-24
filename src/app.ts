@@ -4,6 +4,7 @@ import { SendInfo } from "./sendInfo";
 const path = require("path");
 const fs = require("fs");
 
+
 export default new (class App {
   private scanTest: ScanTest;
 
@@ -35,7 +36,9 @@ export default new (class App {
 
   public execProcess(applicationConfig: ApplicationConfiguration): void {
     let objectPost = {};
+    console.log(`objectConfig: ${JSON.stringify(applicationConfig)}`);
 
+    console.log("Iniciando Processo...")
     applicationConfig.fieldsDefault.forEach((item) => {
       objectPost[item.key] = item.value;
     });

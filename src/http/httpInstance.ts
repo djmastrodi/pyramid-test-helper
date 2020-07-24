@@ -1,14 +1,8 @@
 import axios from "axios";
 
-export const getBaseURL = (baseUrl?: string): string => {
-  if (baseUrl !== undefined && baseUrl !== "") return baseUrl;
-  if (window["_env_"] !== undefined) return window["_env_"].API_BASE_URI;
-  return "";
-};
-
 export const httpInstance = (baseUrl: string, headers: any[] = []) => {
   const API = axios.create({
-    baseURL: getBaseURL(baseUrl),
+    baseURL: baseUrl,
     headers: headers,
   });
 

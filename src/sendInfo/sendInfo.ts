@@ -19,12 +19,15 @@ export class SendInfo {
     baseUrl: string,
     path: string = ""
   ): void {
+    console.log(`iniciando processo de envio de informações`);
     let httpHeadersNew: any[] = [];
 
+    console.log(`Validando Headers`);
     httpHeaders.forEach((item) => {
       httpHeadersNew.push({ [item.Key]: item.value });
     });
 
+    console.log(`Criando instancia http`);
     const API = httpInstance(baseUrl, httpHeadersNew);
 
     let body;
@@ -38,6 +41,9 @@ export class SendInfo {
       body = object;
     }
 
+    console.log(`body:${JSON.stringify(body)}`);
+    console.log(`enviando post`);
+    
     API.post(path, body)
       .then((response) => {
         console.log({
@@ -46,6 +52,8 @@ export class SendInfo {
         });
       })
       .catch((error) => {
+        console.log("Erro ao processar envio...");
+        console.log(`${JSON.stringify(error)}`);
         console.log(error.response);
       });
   }
